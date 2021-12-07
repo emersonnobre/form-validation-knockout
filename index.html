@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form validation - Knockout</title>
+</head>
+<body>
+    <form data-bind="submit: handleSubmit">
+        <div>
+            <label for="name">First name</label>
+            <input type="text" id="name" name="name" data-bind="value: name">
+        </div>
+        <div>
+            <label for="birthDate">Birth date</label>
+            <input type="date" id="birthDate" name="birthDate" data-bind="value: birthDate">
+        </div>
+        <div>
+            <label for="job">What is your job?</label>
+            <select name="jobe" id="job" data-bind="value: job">
+                <option value="student">student</option>
+                <option value="streamer">streamer gamer</option>
+                <option value="dev">Developer</option>
+            </select>
+        </div>
+        <button type="submit">Send info</button>
+    </form>
+
+    <script src="./knockout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.4/knockout.validation.min.js"></script>
+    <script src="./indexViewModel.js"></script>
+</body>
+</html>
